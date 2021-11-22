@@ -1,3 +1,22 @@
+// imposto il container per l'img in flex
+const booleanImgContainer = document.querySelector(".header-left");
+booleanImgContainer.style.display = "flex";
+booleanImgContainer.style.alignItems = "center";
+// correggo le regole per l'img in modo tale che sia adattiva
+const booleanImg = document.querySelector(".header-left img");
+booleanImg.style.margin = "0";
+booleanImg.style.width = "60%";
+booleanImg.style.height = "auto";
+// prepend di un elemento all'interno di right header
+const navLgScreen = document.querySelector(".header-right ul");
+const hiddenMenuLi = document.createElement("li");
+const hiddenMenuA = document.createElement("a");
+// aggiungo un href ad a
+hiddenMenuA.href = "#";
+// ricostruire la struttura della lista
+hiddenMenuLi.append(hiddenMenuA);
+hiddenMenuA.append("Vengo da JS");
+navLgScreen.prepend(hiddenMenuLi); 
 // selezioniamo l'hamburger menu e l'icona con cui attivarlo all'interno del DOM
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const hamburgerMenuIcon = document.querySelector(".header-right ul ~ a");
