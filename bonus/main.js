@@ -24,10 +24,23 @@ const navLgScreenLink1 = document.querySelector(".header-right ul li:nth-child(1
 const navLgScreenLink2 = document.querySelector(".header-right ul li:nth-child(2) a");
 const navLgScreenLink3 = document.querySelector(".header-right ul li:nth-child(3) a");
 const navLgScreenLink4 = document.querySelector(".header-right ul li:nth-child(4) a");
+var i = 0;
+var j = 0;
+var k = 0;
+var l = 0;
 // add EventListener per colorare quello selezionato
 navLgScreenLink1.addEventListener("click",
     function() {
-        navLgScreenLink1.style.color = "red";
+        if (i==0) {
+            navLgScreenLink1.style.color = "red";
+            i = 1;
+            j = 0;
+            k = 0;
+            l = 0;
+        } else {
+            navLgScreenLink1.style.color = "#565A5C";
+            i = 0;
+        } 
         navLgScreenLink2.style.color = "#565A5C";
         navLgScreenLink3.style.color = "#565A5C";
         navLgScreenLink4.style.color = "#565A5C";
@@ -36,7 +49,16 @@ navLgScreenLink1.addEventListener("click",
 navLgScreenLink2.addEventListener("click",
     function() {
         navLgScreenLink1.style.color = "#565A5C";
-        navLgScreenLink2.style.color = "red";
+        if (j==0) {
+            navLgScreenLink2.style.color = "red";
+            i = 0;
+            j = 1;
+            k = 0;
+            l = 0;
+        } else {
+            navLgScreenLink2.style.color = "#565A5C";
+            j = 0;
+        } 
         navLgScreenLink3.style.color = "#565A5C";
         navLgScreenLink4.style.color = "#565A5C";
     } 
@@ -45,7 +67,16 @@ navLgScreenLink3.addEventListener("click",
     function() {
         navLgScreenLink1.style.color = "#565A5C";
         navLgScreenLink2.style.color = "#565A5C";
-        navLgScreenLink3.style.color = "red";
+        if (k==0) {
+            navLgScreenLink3.style.color = "red";
+            i = 0;
+            j = 0;
+            k = 1;
+            l = 0;
+        } else {
+            navLgScreenLink3.style.color = "#565A5C";
+            k = 0;
+        }
         navLgScreenLink4.style.color = "#565A5C";
     } 
 )
@@ -54,7 +85,16 @@ navLgScreenLink4.addEventListener("click",
         navLgScreenLink1.style.color = "#565A5C";
         navLgScreenLink2.style.color = "#565A5C";
         navLgScreenLink3.style.color = "#565A5C";
-        navLgScreenLink4.style.color = "red";
+        if (l==0) {
+            navLgScreenLink4.style.color = "red";
+            i = 0;
+            j = 0;
+            k = 0;
+            l = 1;
+        } else {
+            navLgScreenLink4.style.color = "#565A5C";
+            l = 0;
+        }
     } 
 )
 
